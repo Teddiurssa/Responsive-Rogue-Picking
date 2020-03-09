@@ -3,6 +3,9 @@
     src: url('../fonts/wisdom-script.otf') format('opentype');
 }
 
+/*--Mobile First Design--*/
+
+
 body {
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     display: flex;
@@ -76,7 +79,7 @@ header h1 span {
 
 header nav {
     margin-top: -15px;
-    /* padding: 46px 0; */
+    padding: 15px 0;
 }
 
 header nav ul {
@@ -109,12 +112,10 @@ header nav ul li a {
     align-items: center;
     flex-flow: row wrap;
     width: 100%;
-
 }
 
 .main-image {
     height: auto;
-
 }
 
 .main-image img {
@@ -124,7 +125,6 @@ header nav ul li a {
 
 .main-title {
     height: auto;
-
 }
 
 .main-title h3 {
@@ -134,7 +134,7 @@ header nav ul li a {
 }
 
 .main-title p {
-    /* padding: 0; */
+    padding: 0;
     font-size: 16px;
     line-height: 25px;
 }
@@ -151,16 +151,16 @@ header nav ul li a {
     padding: 10px 0;
 }
 
-/*.section-two {
+.section-two {
     border-left: 1px solid #eee;
     border-right: 1px solid #eee;
 }
-*/
+
 
 
 .section-two h4,
 .section-three h4 {
-    /*padding: 10px 30px;*/
+    padding: 10px 30px;
 }
 
 .menu {
@@ -205,18 +205,55 @@ footer span {
 @media all and (min-width:768px) {
     /* Tablet styles here */
 
-    .bottom-section {}
+    .bottom-section {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+    }
 
-    .section-one {}
+    .section-one {
 
-    .section-two {}
+        border-top: 1px solid #eee;
+    }
 
-    .section-three {}
+    .section-two {
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+    }
 
+    .section-three {
+
+        border-top: 1px solid #eee;
+    }
 
 }
 
 @media all and (min-width:1200px) {
-    /* Desktop styles here */
 
+    /* Desktop styles here */
+    header {
+        flex-flow: row nowrap;
+        align-items: flex-end;
+    }
+
+    header h1 {
+        margin: 0px;
+        padding: 40px 10px 15px 10px;
+        text-align: left;
+        border: none;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row nowrap;
+        padding: 0 10px;
+    }
+
+    header nav ul li {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.875em;
+        padding: 0 10px;
+    }
 }
